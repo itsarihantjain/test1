@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         kaushan: ['Kaushan Script', 'cursive'],
       },
+      backgroundImage: {
+        'reach': "url('/reach.svg')",
+      },
     },
   },
   plugins: [],

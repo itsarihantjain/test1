@@ -46,7 +46,7 @@ export const FeaturedProducts = () => {
                             Peanut Oil <span className="text-[16px] font-regular">500 ml</span>
                         </div>
                         <div style={{ color: COLORS.white100 }} className="flex gap-[12px] pt-[16px]">
-                            <div onClick={() => setCount((e) => e - 1)} style={{ borderColor: COLORS.white }} className="w-6 h-6 rounded-full border flex items-center justify-center cursor-pointer">-</div>
+                            <div onClick={() => setCount((e) => Math.max(0, e - 1))} style={{ borderColor: COLORS.white }} className="w-6 h-6 rounded-full border flex items-center justify-center cursor-pointer">-</div>
                             <div>{count}</div>
                             <div onClick={() => setCount((e) => e + 1)} style={{ borderColor: COLORS.white }} className="w-6 h-6 rounded-full border flex items-center justify-center cursor-pointer">+</div>
                         </div>

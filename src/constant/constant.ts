@@ -17,6 +17,13 @@ import peanutProduct from "../../public/peanutProduct.svg";
 import coconutProduct from "../../public/coconutProduct.svg";
 import mustardProduct from "../../public/mustardProduct.svg";
 
+import twitter from "../../public/twitter.svg"
+import instagram from "../../public/instagram.svg"
+import youtube from "../../public/youtube.svg"
+import facebook from "../../public/facebook.svg"
+
+
+
 
 export const carouselData: Carousel[] = [{
     background: COLORS.mustard100,
@@ -89,3 +96,5 @@ export const naturalData: Natural[] = [{
     description: "Once extracted, our oils are stored in premium tin containers—ensuring zero plastic waste while preserving freshness and preventing oxidation, thus extending its shelf life without compromising quality.  Our spill-proof rubber stopper adds convenience, making sure every pour is smooth, mess-free, and easy to handle."
 },
 ]
+
+export const socialReach = [twitter,instagram,youtube,facebook];

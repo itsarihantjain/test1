@@ -2,6 +2,9 @@ import Image from "next/image";
 import desk1 from "../../../public/desk1.svg";
 import desk2 from "../../../public/desk2.svg";
 import desk3 from "../../../public/desk3.svg";
+import mobile1 from "../../../public/mobile1.svg";
+import mobile2 from "../../../public/mobile2.svg";
+import mobile3 from "../../../public/mobile3.svg";
 import { COLORS } from "@/colors/colors";
 
 export const AboutUsSection = () => {
@@ -22,18 +25,16 @@ export const AboutUsSection = () => {
                     By choosing Anrita, you choose tradition, quality, and sustainability, ensuring a healthier lifestyle for yourself and a better future for the planet.
                 </div>
             </div>
-
-            {/* <div className="relative flex-1"> */}
-            <div className="relative h-fit w-fit -translate-x-[calc(146px+49.5px)]">
+            <div className="relative h-fit w-fit -translate-x-[calc(146px+49.5px)] hidden sm:block">
                 <Image src={desk1} alt={"story"} className="object-contain" />
-
-
                 <Image src={desk2} alt={"story"} className="object-contain absolute right-0 bottom-0 translate-y-1/2 translate-x-1/2" />
                 <Image src={desk3} alt={"story"} className="object-contain absolute bottom-0 translate-y-1/2 -translate-x-1/2" />
-
             </div>
-
-            {/* </div> */}
+            <div className="relative block sm:hidden mb-[78px]">
+                <Image src={mobile1} alt={"story"} className="object-contain" />
+                <Image src={mobile2} alt={"story"} className="object-contain absolute right-0 bottom-10 translate-y-1/2" />
+                <Image src={mobile3} alt={"story"} className="object-contain absolute bottom-8 translate-y-1/2" />
+            </div>
         </div>
     )
 }

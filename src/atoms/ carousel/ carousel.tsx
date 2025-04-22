@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../button";
 import arrowupright from "../../../public/arrowupright.svg"
+import scrolldown from "../../../public/scrolldown.svg"
+import { Header } from "@/components/header";
 
 type CarouselProps = {
   carouselData: Carousel[]
@@ -37,6 +39,9 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
 
   return (
     <div className="relative bg-cover" style={{ background: carouselData[ref.current].background }}>
+      <div className="absoulte top-20 right-0 z-[100]">
+      </div>
+      <Header />
       {
         carouselData[ref.current] && (
           <div className="flex flex-col justify-start transition-all duration-300" >
@@ -52,12 +57,9 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
                   className="object-contain absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 z-[0]" />
 
                 <Image src={carouselData[ref.current].productImage} alt={carouselData[ref.current].heading}
-                  className="object-contain absolute right-0 bottom-0 translate-x-1/2 translate-y-[calc(50%+120px)] z-[0]" />
+                  className="object-contain absolute right-10 -bottom-10 translate-x-1/2 translate-y-[calc(50%+120px)] z-[0]" />
               </div>
-
-
             </div>
-
             <div className="pl-[16px] md:pl-[80px] pt-[74px] md:pt-[12px] font-bold text-[32px]" style={{ color: COLORS.white }}>
               {carouselData[ref.current].heading}
             </div>
@@ -83,7 +85,6 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
           ></div>
         ))}
       </div>
-
 
       <div className="md:block hidden">
         <Arrows next={next} prev={prev} ref={ref} carouselData={carouselData} />
